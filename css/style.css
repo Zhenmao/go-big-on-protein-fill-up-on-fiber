@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: currentColor;
+}
+
+svg {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:root {
+  --font-size-9xl: 9.313rem;
+  --font-size-8xl: 7.451rem;
+  --font-size-7xl: 5.96rem;
+  --font-size-6xl: 4.768rem;
+  --font-size-5xl: 3.815rem;
+  --font-size-4xl: 3.052rem;
+  --font-size-3xl: 2.441rem;
+  --font-size-2xl: 1.953rem;
+  --font-size-xl: 1.563rem;
+  --font-size-lg: 1.25rem;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.8rem;
+  --font-size-xs: 0.64rem;
+
+  --font-family: "Google Sans Flex", sans-serif;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-title: 0.85;
+  --line-height-body: 1.5;
+
+  --color-background: #fbf8f3;
+  --color-text: #413d45;
+  --color-text-muted: #6e6874;
+  --color-grid: #bcb8bf;
+
+  --color-protein-below: #bcb8bf;
+  --color-protein-above: #ffb951;
+  --color-fiber-below: #bcb8bf;
+  --color-fiber-above: #55c2be;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 87.5,
+    "GRAD" 0,
+    "ROND" 100;
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-title);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+@media (width > 60rem) {
+  h1 {
+    font-size: var(--font-size-6xl);
+  }
+}
+
+hgroup p {
+  font-size: var(--font-size-lg);
+  text-wrap: pretty;
+}
+
+footer {
+  color: var(--color-text-muted);
+}
+
+main {
+  margin-block: 4rem;
+}
+
+article {
+  width: min(100% - 2rem, 75rem);
+  margin-inline: auto;
+  display: grid;
+  gap: 4rem;
+}
+
+hgroup {
+  display: grid;
+  gap: 2rem;
+}
+
+h1 {
+  display: grid;
+  gap: 20px;
+}
+
+h1 span:last-child {
+  margin-inline-start: auto;
+  text-align: end;
+}
+
+.shadow {
+  color: var(--color-background);
+  -webkit-text-stroke: 2px var(--color-nutrient);
+  paint-order: stroke;
+  text-shadow:
+    calc(var(--direction) * 1px) 1px 0 var(--color-nutrient),
+    calc(var(--direction) * 2px) 2px 0 var(--color-nutrient),
+    calc(var(--direction) * 3px) 3px 0 var(--color-nutrient),
+    calc(var(--direction) * 4px) 4px 0 var(--color-nutrient),
+    calc(var(--direction) * 5px) 5px 0 var(--color-nutrient),
+    calc(var(--direction) * 6px) 6px 0 var(--color-nutrient),
+    calc(var(--direction) * 7px) 7px 0 var(--color-nutrient),
+    calc(var(--direction) * 8px) 8px 0 var(--color-nutrient),
+    calc(var(--direction) * 9px) 9px 0 var(--color-nutrient),
+    calc(var(--direction) * 10px) 10px 0 var(--color-nutrient),
+    calc(var(--direction) * 11px) 11px 0 var(--color-nutrient),
+    calc(var(--direction) * 12px) 12px 0 var(--color-nutrient),
+    calc(var(--direction) * 13px) 13px 0 var(--color-nutrient),
+    calc(var(--direction) * 14px) 14px 0 var(--color-nutrient),
+    calc(var(--direction) * 15px) 15px 0 var(--color-nutrient),
+    calc(var(--direction) * 16px) 16px 0 var(--color-nutrient),
+    calc(var(--direction) * 17px) 17px 0 var(--color-nutrient),
+    calc(var(--direction) * 18px) 18px 0 var(--color-nutrient),
+    calc(var(--direction) * 19px) 19px 0 var(--color-nutrient),
+    calc(var(--direction) * 20px) 20px 0 var(--color-nutrient);
+}
+
+.protein {
+  color: #ffdfa6;
+  --color-nutrient: var(--color-protein-above);
+  --direction: -1;
+}
+
+.fiber {
+  color: #a2dec7;
+  --color-nutrient: var(--color-fiber-above);
+  --direction: 1;
+}
+
+.chart {
+  position: relative;
+  font-size: var(--font-size-sm);
+}
+
+.chart .tick line {
+  stroke: var(--color-grid);
+}
+
+.chart .tick.is-zero line {
+  stroke-dasharray: 6;
+}
+
+.chart .tick text {
+  color: var(--color-text-muted);
+}
+
+.chart .quadrant__label__text {
+  font-weight: var(--font-weight-bold);
+}
+
+.chart .dot__circle {
+  stroke: var(--color-background);
+}
+
+.chart .is-active .dot__circle {
+  stroke: var(--color-text);
+  stroke-width: 2px;
+}
+
+.chart .dot__text {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  cursor: default;
+}
+
+@media (width > 60rem) {
+  .chart .dot__text {
+    font-size: var(--font-size-sm);
+  }
+}
+
+.tooltip {
+  font-size: var(--font-size-sm);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-background);
+  border-radius: 0.25em;
+  padding: 0.5em 1em 0.75em;
+  border: 1px solid var(--color-grid);
+  display: grid;
+  gap: 0.5em;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.15s,
+    opacity 0.15s;
+}
+
+.tooltip.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.tooltip__entries {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+.tooltip__value {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-threshold);
+  padding-inline: 0.5em;
+  border-radius: calc(infinity * 1px);
+}
