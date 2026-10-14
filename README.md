@@ -1,4 +1,4 @@
-# [Go Big on Protein? Fill Up on fiber?](https://github.com/Zhenmao/go-big-on-protein-fill-up-on-fiber)
+# [Go Big on Protein? Fill Up on fiber?](https://zhenmao.github.io/go-big-on-protein-fill-up-on-fiber/)
 
 ### References:
 
